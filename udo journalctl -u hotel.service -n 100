@@ -1,0 +1,16 @@
+[0;1;31m●[0m hotel.service - Gunicorn instance to serve backend app for alicecore
+     Loaded: loaded (/etc/systemd/system/hotel.service; enabled; vendor preset: enabled)
+     Active: [0;1;31mfailed[0m (Result: exit-code) since Fri 2026-09-18 15:04:45 +0545; 3s ago
+    Process: 131213 ExecStart=/home/ubuntu/alicecore/periperi/myenv/bin/gunicorn -w 4 --bind 0.0.0.0:8089 main:app [0;1;31m(code=exited, status=3)[0m
+   Main PID: 131213 (code=exited, status=3)
+
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131229]:     from root.flask_routes.hotel.journal_utils.utils import post_hotelbill_and_create_journal, post_hotelbill_and_create_journal_for_creditbills
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131229]: ModuleNotFoundError: No module named 'root.flask_routes.hotel.journal_utils'
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131229]: [2026-09-18 15:04:44 +0545] [131229] [INFO] Worker exiting (pid: 131229)
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131213]: [2026-09-18 15:04:44 +0545] [131213] [WARNING] Worker with pid 131227 was terminated due to signal 15
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131213]: [2026-09-18 15:04:44 +0545] [131213] [WARNING] Worker with pid 131229 was terminated due to signal 15
+Sep 18 15:04:44 SILVERLINE-VM-VPC2 gunicorn[131213]: [2026-09-18 15:04:44 +0545] [131213] [WARNING] Worker with pid 131228 was terminated due to signal 15
+Sep 18 15:04:45 SILVERLINE-VM-VPC2 gunicorn[131213]: [2026-09-18 15:04:45 +0545] [131213] [INFO] Shutting down: Master
+Sep 18 15:04:45 SILVERLINE-VM-VPC2 gunicorn[131213]: [2026-09-18 15:04:45 +0545] [131213] [INFO] Reason: Worker failed to boot.
+Sep 18 15:04:45 SILVERLINE-VM-VPC2 systemd[1]: [0;1;39m[0;1;31m[0;1;39mhotel.service: Main process exited, code=exited, status=3/NOTIMPLEMENTED[0m
+Sep 18 15:04:45 SILVERLINE-VM-VPC2 systemd[1]: [0;1;38;5;185m[0;1;39m[0;1;38;5;185mhotel.service: Failed with result 'exit-code'.[0m
